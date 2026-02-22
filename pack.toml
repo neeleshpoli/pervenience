@@ -1,0 +1,13 @@
+name = "Pervenience"
+author = "neeleshpoli"
+version = "1.0.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "bc1e0d96c44c0733440fd0d1a6d8e61b5391c3bf5f1b1592d77d8541736e1d3c"
+
+[versions]
+fabric = "0.18.4"
+minecraft = "1.21.11"

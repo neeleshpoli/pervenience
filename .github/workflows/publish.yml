@@ -1,0 +1,41 @@
+name: Publish to Modrinth
+on:
+  push:
+    tags:
+      - 'v*' # Triggers when you push a tag like v1.0.0
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: 'stable'
+
+      - name: Install packwiz
+        run: go install github.com/packwiz/packwiz@latest
+
+      - name: Build Modrinth Pack
+        run: |
+          # Use the tag name (e.g., v1.0.0) as the version in the pack
+          VERSION_NAME=${GITHUB_REF_NAME#v}
+          packwiz modrinth export --version "$VERSION_NAME"
+
+      - name: Publish to Modrinth
+        uses: modrinth/modrinth-publish@v1
+        with:
+          token: ${{ secrets.MODRINTH_TOKEN }}
+          project-id: "YOUR_PROJECT_ID_HERE"
+          version: ${{ github.ref_name }}
+          loaders: |
+            fabric
+          game-versions: |
+            1.21.1
+          files: |
+            *.mrpack
+          # Optional: Automatically extract the changelog from your commit message
+          changelog: ${{ github.event.head_commit.message }}

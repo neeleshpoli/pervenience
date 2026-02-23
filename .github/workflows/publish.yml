@@ -23,7 +23,7 @@ jobs:
         run: |
           # Use the tag name (e.g., v1.0.0) as the version in the pack
           VERSION_NAME=${GITHUB_REF_NAME#v}
-          packwiz modrinth export --version "$VERSION_NAME"
+          packwiz modrinth export
 
       - name: Get Minecraft Version
         id: get_version

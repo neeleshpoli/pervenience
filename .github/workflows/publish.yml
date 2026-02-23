@@ -2,7 +2,7 @@ name: Publish to Modrinth
 on:
   push:
     tags:
-      - 'v*' # Triggers when you push a tag like v1.0.0
+      - 'v*'
 
 jobs:
   build:
@@ -25,17 +25,18 @@ jobs:
           VERSION_NAME=${GITHUB_REF_NAME#v}
           packwiz modrinth export --version "$VERSION_NAME"
 
+      - name: Get Minecraft Version
+        id: get_version
+        run: |
+          MC_VER=$(yq '.versions.minecraft' pack.toml)
+          echo "minecraft_version=$MC_VER" >> $GITHUB_OUTPUT
+
       - name: Publish to Modrinth
-        uses: modrinth/modrinth-publish@v1
+        uses: Kira-NT/mc-publish@v3.3
         with:
-          token: ${{ secrets.MODRINTH_TOKEN }}
-          project-id: "YOUR_PROJECT_ID_HERE"
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+          modrinth-id: "hmy15WsK"
+          files: "*.mrpack"
           version: ${{ github.ref_name }}
-          loaders: |
-            fabric
-          game-versions: |
-            1.21.1
-          files: |
-            *.mrpack
-          # Optional: Automatically extract the changelog from your commit message
-          changelog: ${{ github.event.head_commit.message }}
+          game-versions: ${{ steps.get_version.outputs.minecraft_version }}
+          loaders: "fabric"

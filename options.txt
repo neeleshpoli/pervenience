@@ -1,7 +1,7 @@
 version:4903
 ao:true
 biomeBlendRadius:2
-chunkSectionFadeInTime:0.75
+chunkSectionFadeInTime:0.0
 cutoutLeaves:true
 enableVsync:true
 entityDistanceScaling:1.0
@@ -19,7 +19,7 @@ prioritizeChunkUpdates:1
 fullscreen:true
 exclusiveFullscreen:false
 guiScale:0
-maxAnisotropyBit:1
+maxAnisotropyBit:3
 textureFiltering:1
 maxFps:260
 improvedTransparency:false
@@ -28,9 +28,9 @@ mipmapLevels:4
 narrator:0
 particles:0
 reducedDebugInfo:false
-renderClouds:"true"
+renderClouds:"false"
 cloudRange:64
-renderDistance:12
+renderDistance:8
 simulationDistance:10
 screenEffectScale:1.0
 soundDevice:""
@@ -55,7 +55,7 @@ toggleSprint:false
 toggleAttack:false
 toggleUse:false
 sprintWindow:7
-darkMojangStudiosBackground:false
+darkMojangStudiosBackground:true
 hideLightningFlashes:false
 hideSplashTexts:false
 mouseSensitivity:0.5
@@ -63,8 +63,8 @@ damageTiltStrength:1.0
 highContrast:false
 highContrastBlockOutline:false
 narratorHotkey:true
-resourcePacks:[]
-incompatibleResourcePacks:[]
+resourcePacks:["vanilla","continuity:glass_pane_culling_fix","continuity:default"]
+incompatibleResourcePacks:["server/00000001/3bb2c060-ecf2-4951-9c2a-9b4792a7b51c"]
 lastServer:
 lang:en_us
 chatVisibility:0
@@ -186,7 +186,7 @@ key_key.modmenu.open_menu:key.keyboard.unknown
 key_key.optigui.inspect:key.keyboard.f12
 key_zoomify.key.zoom:key.keyboard.c
 key_zoomify.key.zoom.secondary:key.keyboard.f6
-soundCategory_master:1.0
+soundCategory_master:0.0
 soundCategory_music:1.0
 soundCategory_record:1.0
 soundCategory_weather:1.0

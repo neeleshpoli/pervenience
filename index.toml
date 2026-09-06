@@ -5,6 +5,10 @@ file = "LICENSE"
 hash = "9984b97d0d4ecb102a6c98e4111a44c99439d43cfb1207c9eb73ebe1ff8b52e0"
 
 [[files]]
+file = "config/DistantHorizons.toml"
+hash = "45d09070129964f7ea78ffbb3971d6775f8e1ab525d877230895f1ce6d5b7376"
+
+[[files]]
 file = "config/appleskin.json5"
 hash = "65edc28ca2bf6bd3e3684ae545fb74bcc0ec935a40d6ac60cb68c00c152e34fb"
 
@@ -148,7 +152,7 @@ metafile = true
 
 [[files]]
 file = "mods/asyncparticles.pw.toml"
-hash = "1816433dd2f04d0cefcf786f8817129c5d17542c68afa2e92a17c34330f5437c"
+hash = "2a08fa475ead9beef0b52922948f12e4626b2d02974bf6d4ace3d29c1e2b5439"
 metafile = true
 
 [[files]]
@@ -177,13 +181,18 @@ hash = "57ec34a7f37b99e4638f5214d1de0bef916e981743d3648c57cad1e8e399982b"
 metafile = true
 
 [[files]]
+file = "mods/distanthorizons.pw.toml"
+hash = "ce280969fa45ec982f36067934c36f76098dcf8b0c71bab46691e6b5b8e9664e"
+metafile = true
+
+[[files]]
 file = "mods/entityculling.pw.toml"
 hash = "ef9b3d887d5b2b31809fda35b2bfa4d68346e4491d4b52128358c2ed77741b89"
 metafile = true
 
 [[files]]
 file = "mods/fabric-api.pw.toml"
-hash = "7ed424f5ce1febe2c2c0e5fc58d34858f1bbd97eabdceb9b9c6afdde4bf578df"
+hash = "2f63ca526981e06de2c3b9684cfb7e21abf636cf9f0f657b9151685cd11692a7"
 metafile = true
 
 [[files]]
@@ -293,7 +302,7 @@ metafile = true
 
 [[files]]
 file = "mods/sodium.pw.toml"
-hash = "b0d722aa3b463fddb3a425affdc9e6c898a657040321e8c6501b089d8f7caee2"
+hash = "80914734f597e4759cfc6c79a8391fad96c09109b79895439e456b61662bdcb6"
 metafile = true
 
 [[files]]
@@ -312,6 +321,11 @@ hash = "9d2d6dfc69a39361bb5d9e30c6c35c2ca7b8121ac0b66fad29bcfa81c40b0738"
 metafile = true
 
 [[files]]
+file = "mods/wthit.pw.toml"
+hash = "64a6167d9e8ec2b0b8f8e87c28c4b7ff94351ca2460d175ed8bf04dc5b8cd49a"
+metafile = true
+
+[[files]]
 file = "mods/yacl.pw.toml"
 hash = "b08ea22923b8ccf2fbeb020cb532487be60c2dd75dd8e1c04e14deb66c118bba"
 metafile = true
@@ -323,4 +337,4 @@ metafile = true
 
 [[files]]
 file = "options.txt"
-hash = "2566f50bd894854d91eb103564cf98ee6d7efdd576dd0d54abf62e04b014e3f9"
+hash = "adf8eba6c2b93bca2e9d7188ab7f2da9d1612b1fb4ca5b8f340ba1afda27040d"
